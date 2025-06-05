@@ -8,3 +8,4 @@ ghpages.publish('../dist', function(err) {
 		console.log('Deploying gh-pages');
 	}
 });
+
