@@ -1,53 +1,22 @@
-.header{
-  display: flex;
-  padding: 1.5rem;
+.navbar{
   position: fixed;
-  top: 0;
-  right: 10px;
-  
-  .hamburger{
-    padding: 1rem;
-    // padding-right: 3rem;
-    margin-left: auto;
-    margin-right: 10px;
-    cursor: pointer;
-    z-index: 2;
-
-    &__icon{
-      @include Hamburger;
-
-      &::before{
-        content: '';
-        @include Hamburger;
-        transform: translate(-10px, 10px);
-      }
-
-      &::after{
-        content: '';
-        @include Hamburger;
-        width: 25px;
-        transform: translate(-10px, -10px);
-      }
-    }
-
-    &:active{
-      animation: twist 3s linear infinite;
-      transform: rotateY(360deg);
-    }
-  }
+  top:0;
+  right:0;
+  left:0;
+  padding:1rem;
+  background: rgba(0,0,0,0.6);
+  z-index:100;
 }
-
-@keyframes twist {
-
-  0%{
-    transform: rotateY(0deg);
-  }
-  
-  50%{
-    transform: rotateY(360deg);
-  }
-
-  100%{
-    transform: rotateY(0deg);
-  }
+.nav{
+  list-style:none;
+  display:flex;
+  justify-content:flex-end;
+  margin:0;
+}
+.nav li{
+  margin-left:1rem;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
 }

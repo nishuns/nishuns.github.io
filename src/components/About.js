@@ -1,8 +1,10 @@
-const { Scroll } = require("./Scroll")
+const { Scroll } = require("./Scroll");
 
-exports.About = () => {
-  return `<div class="page about">
-  <div class="fizz"></div>
-  ${Scroll()}
-  </div>`
-}
+exports.About = ({ description }) => {
+  return `
+  <div class="page about" id="about">
+    <div class="fizz"></div>
+    <p class="about__text">${description}</p>
+    ${Scroll('#skills')}
+  </div>`;
+};
